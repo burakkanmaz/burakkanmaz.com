@@ -92,6 +92,32 @@
                                     padding: 0;
                                 }
 
+                                @media (max-width : 600px) {
+                                    .kt-notes__media {
+                                        display: none;
+                                    }
+
+                                    .kt-notes .kt-notes__items .kt-notes__item {
+                                        border-left: 0;
+                                    }
+
+                                    .kt-notes__item {
+                                        padding: 0 !important;
+                                    }
+
+                                    .kt-notes .kt-notes__items .kt-notes__item .kt-notes__content:after {
+                                        content: normal;
+                                    }
+
+                                    .kt-notes .kt-notes__items .kt-notes__item {
+                                        margin: 0 20px 20px 0;
+                                    }
+
+                                    .summary-info {
+                                        margin-top: 20px;
+                                    }
+                                }
+
                                 body {
                                     text-align: justify;
                                 }
@@ -186,7 +212,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-9">
+                                                    <div class="col-md-9 summary-info">
                                                         Evli ve bir çocuk babası olan Burak, profesyonel olarak 10 yılı
                                                         aşkın süredir ağırlıklı olarak Microsoft teknolojileri üzerine
                                                         çalışmaktadır. Aynı zamanda güncel teknolojileri düzenli takip
