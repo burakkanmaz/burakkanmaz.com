@@ -36,12 +36,27 @@
                         <div class="kt-container  kt-grid__item kt-grid__item--fluid">
 
                             <style>
-                                .flag-dev-visible {
-                                    display: none;
+                                body {
+                                    font-size: 14px;
                                 }
 
-                                .flag-prod-visible {
-                                    display: block;
+                                @media print {
+                                    .pagebreak {
+                                        page-break-before: always;
+                                    }
+
+                                    a:link {
+                                        border-bottom: none !important;
+                                        text-decoration: none !important;
+                                    }
+
+                                    a[href]:after {
+                                        content: none !important;
+                                    }
+
+                                    .kt-portlet__head-toolbar{
+                                        display: none !important;
+                                    }
                                 }
 
                                 .kt-notes__item {
@@ -128,20 +143,20 @@
                             </style>
 
                             <div class="kt-container  kt-grid__item kt-grid__item--fluid" style="margin-top: 20px;">
-                                <div class="row">
-                                    <!-- <div class="col-md-12 d-sm-none d-block">
-                                        <a target="_blank" href="/cv/Content/Files/BurakKanmaz-20201215.pdf"
-                                            class="btn btn-success flag-prod-visible">
+                                <div class="row justify-content-center">
+                                    <div class="col-xs-12 text-center d-sm-none" style="margin-bottom: 10px;">
+                                        <a target="_blank" href="/cv/Content/Files/BurakKanmaz-20220310.pdf"
+                                            class="btn btn-success">
                                             <em class="fa fa-file-pdf" style="margin-right: 5px;"></em>
                                             PDF olarak İndir
                                         </a>
-                                    </div> -->
-                                    <div class="col-md-12 flag-dev-visible" style="margin-bottom:10px;">
+                                    </div>
+                                    <div class="col-md-12" style="margin-bottom:10px;">
                                         <div class="kt-section__content kt-section__content--solid">
                                             <div class="kt-divider">
                                                 <span></span>
                                                 <span>
-                                                    Bu özgeçmiş 01.05.2021 tarihinde güncellenmiştir. En güncel
+                                                    Bu özgeçmiş 10.03.2022 tarihinde güncellenmiştir. En güncel
                                                     özgeçmiş için
                                                     <a class="kt-link kt-font-boldest"
                                                         href="">https://burakkanmaz.com/cv</a> adresini ziyaret
@@ -152,7 +167,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-2">
-                                        <div class="kt-portlet" style="min-height: 200px;">
+                                        <div class="kt-portlet">
                                             <div class="kt-portlet__body" style="padding: 10px;">
                                                 <img src="Content/Images/burak-2020.png" class="d-sm-block d-none"
                                                     style="width: 100%;" alt="Burak Kanmaz">
@@ -168,24 +183,19 @@
                                                     <h2 class="kt-portlet__head-title kt-font-brand">
                                                         Burak Kanmaz
                                                     </h2>
-                                                    <span style="margin-left:15px;"
+                                                    <span style="margin-left:15px; width: 100px;"
                                                         class="kt-badge kt-badge--brand kt-badge--lg kt-badge--rounded kt-badge--inline">
                                                         Team Lead
                                                     </span>
                                                 </div>
-                                                <div class="kt-portlet__head-toolbar ">
-                                                    <span style="margin-left:15px;"
-                                                        class="kt-badge kt-badge--brand kt-badge--lg kt-badge--rounded kt-badge--inline">
-                                                        <em class="fa fa-clock" style="margin-right: 5px;"></em>
-                                                        01.05.2021
-                                                    </span>
+                                                <div class="kt-portlet__head-toolbar">
                                                     <div class="btn-group">
-                                                        <!-- <a target="_blank"
-                                                            href="/cv/Content/Files/BurakKanmaz-20201215.pdf"
-                                                            class="btn btn-success flag-prod-visible d-sm-block d-none">
+                                                        <a target="_blank"
+                                                            href="/cv/Content/Files/BurakKanmaz-20220310.pdf"
+                                                            class="btn btn-success d-sm-block d-none">
                                                             <em class="fa fa-file-pdf" style="margin-right: 5px;"></em>
                                                             PDF olarak İndir
-                                                        </a> -->
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -205,7 +215,7 @@
                                                                 </a>
                                                             </div>
                                                         </div>
-                                                        <div class="kt-user-card-v2">
+                                                        <div class="kt-user-card-v2" style="margin-bottom: 10px;">
                                                             <div class="kt-user-card-v2__pic">
                                                                 <div class="kt-badge kt-badge--brand">
                                                                     <em class="fa fa-at"></em>
@@ -218,9 +228,19 @@
                                                                 </a>
                                                             </div>
                                                         </div>
+                                                        <div class="kt-user-card-v2">
+                                                            <div class="kt-user-card-v2__pic">
+                                                                <div class="kt-badge kt-badge--brand">
+                                                                    <em class="fa fa-birthday-cake"></em>
+                                                                </div>
+                                                            </div>
+                                                            <div class="kt-user-card-v2__details">
+                                                                <a class="kt-user-card-v2__name">12.04.1987</a>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     <div class="col-md-8 col-lg-9 summary-info">
-                                                        Evli ve bir çocuk babası olan Burak, profesyonel olarak 10 yılı
+                                                        Evli ve bir çocuk babası olan Burak, profesyonel olarak 12 yılı
                                                         aşkın süredir ağırlıklı olarak Microsoft teknolojileri üzerine
                                                         çalışmaktadır. Aynı zamanda güncel teknolojileri düzenli takip
                                                         ederek yeniliklere açık olarak çalışmalar yapmaktadır. İnovatif
@@ -236,7 +256,7 @@
 
                                 <div class="row">
 
-                                    <div class="col-xl-6">
+                                    <div class="col-md-7">
 
                                         <div class="kt-portlet">
                                             <div class="kt-portlet__head">
@@ -276,7 +296,27 @@
                                                                     </div>
                                                                 </div>
                                                                 <span class="kt-notes__body">
-                                                                    
+                                                                    Kurumsal firmalara tailor-made yazılımlar geliştiren
+                                                                    7 kişilik yazılım ekibinin Team Lead olarak ekibi,
+                                                                    işleri ve müşterileri yönetti. 3 holding, 1 banka ve
+                                                                    1 üretim tesisi olmak üzere <strong>5 kurumsal
+                                                                        firmaya ait 15 projenin</strong> takibini,
+                                                                    yönetimini ve müşteri iletişimini sağladı.
+                                                                    <br><br>
+                                                                    Ekip yönetimi yanında şirket içerisindeki
+                                                                    <strong>tüm teknik işlerin sorumluluğunu</strong> da
+                                                                    üstlendi. Bu doğrultuda şirketin tüm fiziksel ve
+                                                                    dijital teknik varlıklarının toparlanması ve
+                                                                    yönetimi, diğer ekiplerin teknik koordinasyonu ve
+                                                                    şirketin gelecek planlarının belirlenmesi gibi
+                                                                    konularda aktif rol aldı.
+                                                                    <br><br>
+                                                                    Bunların yanı sıra, görevi boyunca müşterilerle olan
+                                                                    tüm teknik iletişim ve yönetim süreçlerinde rol
+                                                                    aldı. 75'den fazla iş görüşmesi yaparak iç ekiplerin
+                                                                    büyümesine yardım etti. Jira tarafındaki tecrübesi
+                                                                    ile, şirketin müşterilerine <strong>Jira
+                                                                        Danışmanlığı</strong> vermesini sağladı.
                                                                 </span>
                                                             </div>
                                                         </div>
@@ -342,6 +382,8 @@
                                                             </div>
                                                         </div>
 
+                                                        <div class="pagebreak"> </div>
+
                                                         <div class="kt-notes__item">
                                                             <div class="kt-notes__media">
                                                                 <img src="Content/Images/istib.png" alt="image">
@@ -388,6 +430,7 @@
                                                                 </span>
                                                             </div>
                                                         </div>
+
 
                                                         <div class="kt-notes__item">
                                                             <div class="kt-notes__media">
@@ -538,34 +581,9 @@
 
                                             </div>
                                         </div>
-
-                                        <div class="kt-portlet">
-                                            <div class="kt-portlet__head">
-                                                <div class="kt-portlet__head-label">
-                                                    <h3 class="kt-portlet__head-title">
-                                                        Freelance
-                                                    </h3>
-                                                </div>
-                                            </div>
-                                            <div class="kt-portlet__body" style="display: block;">
-                                                Gençlik ve Spor Bakanlığı için; <strong>2017 Erzurum Avrupa Gençlik Kış
-                                                    Olimpiyatlarının</strong> ve <strong>2017 Samsun İşitme Engelliler
-                                                    Olimpiyatlarının</strong> web sitelerini, mobil uygulamalarını ve
-                                                olimpiyat yönetim sistemlerini geliştirdi. Bu alt yapı ile 2 olimpiyat
-                                                oyunları boyunca ziyaretçilerin toplamda <strong>30 milyon</strong>
-                                                üzeri isteğine, <strong> %100 uptime</strong> oranıyla ve 250 ms altında
-                                                response süresiyle cevap verdi.
-                                                <br /><br />
-                                                Bunun yanında bir çok kurumsal firmaya intranet ve web uygulamaları
-                                                geliştirdi. 2017 yılı sonunda Freelance iş yapmayı bıraktı.
-                                            </div>
-                                        </div>
-
-
-
                                     </div>
 
-                                    <div class="col-xl-6">
+                                    <div class="col-md-5">
 
                                         <div class="kt-portlet">
                                             <div class="kt-portlet__head">
@@ -610,15 +628,27 @@
                                                             <div class="kt-timeline-v3__item-desc">
                                                                 <span class="kt-timeline-v3__item-text">
                                                                     <a href="#" class="kt-link kt-font-boldest">
+                                                                        Mobil Teknolojiler
+                                                                    </a>
+                                                                </span><br>
+                                                                <span class="kt-timeline-v3__item-user-name">
+                                                                    <a href="#" class="kt-link kt-link--dark">
+                                                                        Flutter, Ionic, Swift
+                                                                    </a>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="kt-timeline-v3__item kt-timeline-v3__item--success">
+                                                            <div class="kt-timeline-v3__item-desc">
+                                                                <span class="kt-timeline-v3__item-text">
+                                                                    <a href="#" class="kt-link kt-font-boldest">
                                                                         Data Store/Process Teknolojileri
                                                                     </a>
                                                                 </span><br>
                                                                 <span class="kt-timeline-v3__item-user-name">
                                                                     <a href="#" class="kt-link kt-link--dark">
-                                                                        MSSQL, PL/SQL, PostreSQL, MongoDB, Redis,
-                                                                        RabbitMQ, Solr,
-                                                                        Elastic Search (ELK), Dapper, Entity Framework,
-                                                                        Hadoop
+                                                                        EF, MSSQL, PL/SQL, PostreSQL, MongoDB, Redis,
+                                                                        RabbitMQ, Solr, Elastic Search (ELK)
                                                                     </a>
                                                                 </span>
                                                             </div>
@@ -647,7 +677,8 @@
                                                                 </span><br>
                                                                 <span class="kt-timeline-v3__item-user-name">
                                                                     <a href="#" class="kt-link kt-link--dark">
-                                                                        TFS, Git, Svn, Jira, Confluence, Bitbucket
+                                                                        Azure DevOps, TFS, Git, Jira, Confluence,
+                                                                        Bitbucket
                                                                     </a>
                                                                 </span>
                                                             </div>
@@ -656,12 +687,13 @@
                                                             <div class="kt-timeline-v3__item-desc">
                                                                 <span class="kt-timeline-v3__item-text">
                                                                     <a href="#" class="kt-link kt-font-boldest">
-                                                                        Mimari ve Metodolojiler
+                                                                        Yönetimsel Teknolojiler
                                                                     </a>
                                                                 </span><br>
                                                                 <span class="kt-timeline-v3__item-user-name">
                                                                     <a href="#" class="kt-link kt-link--dark">
-                                                                        OOP, AOP, TDD, ODD, DDD, Agile, Scrum
+                                                                        Microsoft 365, Exchange, Azure AD, Azure Cloud,
+                                                                        MPN, Cloudflare
                                                                     </a>
                                                                 </span>
                                                             </div>
@@ -685,7 +717,7 @@
                                                             <div class="kt-timeline-v3__item-desc">
                                                                 <span class="kt-timeline-v3__item-text">
                                                                     <a href="#" class="kt-link kt-font-boldest">
-                                                                        Öğrenmeye Devam Ettiği Teknolojiler
+                                                                        Yönelmeye Çalıştığı Teknolojiler
                                                                     </a>
                                                                 </span><br>
                                                                 <span class="kt-timeline-v3__item-user-name">
@@ -748,7 +780,7 @@
                                             </div>
                                         </div>
 
-
+                                        <div class="pagebreak"> </div>
 
                                         <div class="kt-portlet">
                                             <div class="kt-portlet__head">
@@ -766,8 +798,8 @@
                                                         </span>
                                                         <a href="javascript:void(0);"
                                                             class="kt-widget4__title kt-widget4__title--light">
-                                                            Pandemi döneminde uzaktan verimli çalışmasından dolayı özel
-                                                            teşekkür ödülüne layık görüldü
+                                                            Pandemi döneminde uzaktan verimli çalışmasından dolayı
+                                                            Ericsson özel teşekkür ödülüne layık görüldü
                                                         </a>
                                                         <span class="kt-widget4__number kt-font-info">2020</span>
                                                     </div>
@@ -864,7 +896,7 @@
                                                             </div>
                                                         </div>
 
-                                                        <div class="kt-notes__item">
+                                                        <div class="kt-notes__item" style="display:none;">
                                                             <div class="kt-notes__media">
                                                                 <img src="Content/Images/istanbul-universitesi.jpg"
                                                                     alt="image">
@@ -941,6 +973,27 @@
                                             </div>
                                         </div>
 
+                                        <div class="kt-portlet">
+                                            <div class="kt-portlet__head">
+                                                <div class="kt-portlet__head-label">
+                                                    <h3 class="kt-portlet__head-title">
+                                                        Freelance
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="kt-portlet__body" style="display: block;">
+                                                Gençlik ve Spor Bakanlığı için; <strong>2017 Erzurum Avrupa Gençlik Kış
+                                                    Olimpiyatlarının</strong> ve <strong>2017 Samsun İşitme Engelliler
+                                                    Olimpiyatlarının</strong> web sitelerini, mobil uygulamalarını ve
+                                                olimpiyat yönetim sistemlerini geliştirdi. Bu alt yapı ile 2 olimpiyat
+                                                oyunları boyunca ziyaretçilerin toplamda <strong>30 milyon</strong>
+                                                üzeri isteğine, <strong> %100 uptime</strong> oranıyla ve 250 ms altında
+                                                response süresiyle cevap verdi.
+                                                <br /><br />
+                                                Bunun yanında bir çok kurumsal firmaya intranet ve web uygulamaları
+                                                geliştirdi. 2017 yılı sonunda Freelance iş yapmayı bıraktı.
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
