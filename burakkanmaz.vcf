@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:Burak Kanmaz
+N:Kanmaz;Burak;;;
+TEL;TYPE=CELL,pref:+905387789086
+EMAIL:burak@kanmaz.net
+URL:https://burakkanmaz.com
+ADR;TYPE=work;LABEL="Istanbul, Turkey":;;;Istanbul;;;Turkey
+TITLE:Software Developer
+GEO:41.0363833,28.9209495
+BDAY:1987-04-12
+END:VCARD
