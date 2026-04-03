@@ -1,302 +1,339 @@
 <!DOCTYPE html>
-<html lang="en" class="theme-color-1a77d4 theme-skin-light">
+<html lang="en" class="scroll-smooth">
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="cf-2fa-verify" content="d1041ac958193a3">
-	<title>Burak KANMAZ</title>
-	<link rel="shortcut icon" type="image/ico" href="/assets/images/Icons/favicon-16x16.png" />
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fredoka+One">
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic">
-	<link rel="stylesheet" type="text/css" href="/assets/fonts/icomoon/style.css">
-	<link rel="stylesheet" type="text/css" href="/assets/styles/style.css">
-	<link rel="stylesheet" type="text/css" href="/assets/styles/colors/blue.css">
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-MRCX9GNSW5"></script>
-	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="cf-2fa-verify" content="d1041ac958193a3" />
+  <title>Burak Kanmaz — Software Developer</title>
+  <link rel="shortcut icon" type="image/ico" href="/assets/images/Icons/favicon-16x16.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MRCX9GNSW5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-MRCX9GNSW5');
+  </script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            border: 'hsl(var(--border))',
+            background: 'hsl(var(--background))',
+            foreground: 'hsl(var(--foreground))',
+            muted: { DEFAULT: 'hsl(var(--muted))', foreground: 'hsl(var(--muted-foreground))' },
+            card: { DEFAULT: 'hsl(var(--card))', foreground: 'hsl(var(--card-foreground))' },
+            primary: { DEFAULT: 'hsl(var(--primary))', foreground: 'hsl(var(--primary-foreground))' },
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 240 10% 3.9%;
+      --card: 0 0% 100%;
+      --card-foreground: 240 10% 3.9%;
+      --muted: 240 4.8% 95.9%;
+      --muted-foreground: 240 3.8% 46.1%;
+      --border: 240 5.9% 90%;
+      --primary: 240 5.9% 10%;
+      --primary-foreground: 0 0% 98%;
+    }
+    .dark {
+      --background: 240 10% 3.9%;
+      --foreground: 0 0% 98%;
+      --card: 240 10% 3.9%;
+      --card-foreground: 0 0% 98%;
+      --muted: 240 3.7% 15.9%;
+      --muted-foreground: 240 5% 64.9%;
+      --border: 240 3.7% 15.9%;
+      --primary: 0 0% 98%;
+      --primary-foreground: 240 5.9% 10%;
+    }
+    body { font-family: 'Inter', sans-serif; }
 
-	gtag('config', 'G-MRCX9GNSW5');
-	</script>
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-	<!-- Modernizer for detect what features the user’s browser has to offer -->
-	<script type="text/javascript" src="/assets/scripts/libs/modernizr.js"></script>
+    /* Timeline */
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -1px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: hsl(var(--border));
+    }
+    .timeline-dot {
+      position: absolute;
+      left: -5px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: hsl(var(--muted-foreground));
+      flex-shrink: 0;
+    }
+
+    /* Fade-in animation */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.5s ease both; }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+  </style>
 </head>
 
-<body class="home header-has-img loading">
-	<div class="wrapper">
-		<header class="header">
-			<div class="head-bg" style="background-image: url('/assets/images/san-fransisco.jpg')"></div>
-		</header>
-		<div class="content">
+<body class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 antialiased transition-colors duration-300">
 
-			<div class="container">
-				<section id="about" class="section section-about">
-					<div class="animate-up">
-						<div class="section-box">
-							<div class="profile">
-								<div class="row">
-									<div class="col-xs-5">
-										<div class="profile-photo">
-											<img src="/assets/images/2024-2.jpg" alt="Burak KANMAZ" />
-										</div>
-									</div>
-									<div class="col-xs-7">
-										<div class="profile-info">
-											<div class="profile-preword">
-												<span>Hello</span>
-											</div>
-											<h1 class="profile-title">Burak KANMAZ</h1>
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 border-b border-zinc-200 dark:border-zinc-800 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md">
+    <div class="max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
+      <span class="font-semibold tracking-tight text-sm">burakkanmaz.com</span>
+      <nav class="flex items-center gap-6">
+        <a href="#experience" class="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Experience</a>
+        <a href="#education" class="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Education</a>
+        <button
+          id="theme-toggle"
+          aria-label="Toggle theme"
+          class="h-8 w-8 inline-flex items-center justify-center rounded-md border border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+        >
+          <!-- Sun -->
+          <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden">
+            <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+          </svg>
+          <!-- Moon -->
+          <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
 
-											<h2 class="profile-position">Software Developer</h2>
-										</div>
-										<ul class="profile-list">
-											<li class="clearfix">
-												<strong class="title">E-mail</strong>
-												<span class="cont">
-													<a href="https://mailhide.io/e/xayLu" onclick="mailhidepopup=window.open('https://mailhide.io/e/xayLu','mailhidepopup','width=580,height=635'); return false;">b......@kanmaz.net</a>
-												</span>
-											</li>
-											<li class="clearfix">
-												<strong class="title">Phone</strong>
-												<span class="cont">
-													<a href="tel:+905387789086">+90 (538) 778 90 86</a>
-												</span>
-											</li>
-											<li class="clearfix">
-												<strong class="title">Location</strong>
-												<span class="cont">Istanbul, Turkey</span>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="profile-social">
-								<ul class="social">
-									<li>
-										<a class="ripple-centered" href="https://www.linkedin.com/in/burakkanmaz/" target="_blank">
-											<i class="rsicon rsicon-linkedin"></i>
-										</a>
-									</li>
-									<li style="display:none">
-										<a class="ripple-centered" href="https://github.com/burakkanmaz" target="_blank">
-											<i class="rsicon rsicon-github"></i>
-										</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</section>
+  <main class="max-w-3xl mx-auto px-6 py-16 space-y-20">
 
-				<section id="experience" class="section section-experience">
-					<div class="animate-up">
-						<h2 class="section-title">Work Experiences</h2>
-						<div class="timeline">
-							<div class="timeline-bar"></div>
-							<div class="timeline-inner clearfix">
-								<div class="timeline-box timeline-box-left">
-									<span class="dot"></span>
+    <!-- Hero / About -->
+    <section class="fade-up">
+      <div class="flex items-start gap-6 sm:gap-8">
+        <img
+          src="/assets/images/2024-4.jpg"
+          alt="Burak Kanmaz"
+          class="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border-2 border-zinc-200 dark:border-zinc-700 flex-shrink-0"
+        />
+        <div class="min-w-0">
+          <h1 class="text-2xl sm:text-3xl font-bold tracking-tight">Burak Kanmaz</h1>
+          <p class="text-zinc-500 dark:text-zinc-400 mt-1">Software Developer &middot; Istanbul, Turkey</p>
 
-									<div class="timeline-box-inner animate-right">
-										<span class="arrow"></span>
+          <div class="flex flex-wrap gap-3 mt-4">
+            <a
+              href="https://www.linkedin.com/in/burakkanmaz/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 text-sm px-3 py-1.5 rounded-md border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/burakkanmaz"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 text-sm px-3 py-1.5 rounded-md border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              GitHub
+            </a>
+            <a
+              href="https://mailhide.io/e/xayLu"
+              onclick="mailhidepopup=window.open('https://mailhide.io/e/xayLu','mailhidepopup','width=580,height=635'); return false;"
+              class="inline-flex items-center gap-1.5 text-sm px-3 py-1.5 rounded-md border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              Email
+            </a>
+            <a
+              href="tel:+905387789086"
+              class="inline-flex items-center gap-1.5 text-sm px-3 py-1.5 rounded-md border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.48 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              +90 538 778 90 86
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-										<div class="date">2022 - ....</div>
-										<h3>FREELANCE</h3>
-										<h4>Software Developer</h4>
-										<p style="text-align: center; width: 100%;">
-											<img alt="" src="/assets/images/freelance.png" style="width: 150px;" />
-										</p>
-									</div>
-								</div>
-								<div class="timeline-box timeline-box-right">
-									<span class="dot"></span>
+    <!-- Work Experience -->
+    <section id="experience" class="fade-up delay-1">
+      <h2 class="text-sm font-medium text-zinc-400 dark:text-zinc-500 uppercase tracking-widest mb-8">Work Experience</h2>
 
-									<div class="timeline-box-inner animate-right">
-										<span class="arrow"></span>
+      <div class="relative pl-5 space-y-8 border-l border-zinc-200 dark:border-zinc-800">
 
-										<div class="date">2022 - 2022</div>
-										<h3>INOOSTER</h3>
-										<h4>Head of Technology</h4>
-										<p style="text-align: center; width: 100%;">
-											<img alt="" src="/assets/images/inooster-logo.png" style="width: 150px;" />
-										</p>
-									</div>
-								</div>
-								<div class="timeline-box timeline-box-left">
-									<span class="dot"></span>
+        <div class="relative">
+          <span class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-900 dark:bg-zinc-100 border-2 border-white dark:border-zinc-950"></span>
+          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 mb-1">
+            <h3 class="font-semibold">BtcTurk</h3>
+            <span class="text-xs text-zinc-400 dark:text-zinc-500 tabular-nums">2026 — present</span>
+          </div>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400">Team Lead</p>
+        </div>
 
-									<div class="timeline-box-inner animate-right">
-										<span class="arrow"></span>
+        <div class="relative">
+          <span class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-700 border-2 border-white dark:border-zinc-950"></span>
+          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 mb-1">
+            <h3 class="font-semibold">ProSymmetry</h3>
+            <span class="text-xs text-zinc-400 dark:text-zinc-500 tabular-nums">2022 — 2026</span>
+          </div>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400">Software Architect</p>
+        </div>
 
-										<div class="date">2021 - 2022</div>
-										<h3>ANTASYA</h3>
-										<h4>Team Lead</h4>
-										<p style="text-align: center; width: 100%;">
-											<img alt="" src="/assets/images/antasya.png" style="width: 150px;" />
-										</p>
-									</div>
-								</div>
-								<div class="timeline-box timeline-box-right">
-									<span class="dot"></span>
+        <div class="relative">
+          <span class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-700 border-2 border-white dark:border-zinc-950"></span>
+          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 mb-1">
+            <h3 class="font-semibold">Inooster</h3>
+            <span class="text-xs text-zinc-400 dark:text-zinc-500 tabular-nums">2022 — 2022</span>
+          </div>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400">Head of Technology</p>
+        </div>
 
-									<div class="timeline-box-inner animate-right">
-										<span class="arrow"></span>
+        <div class="relative">
+          <span class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-700 border-2 border-white dark:border-zinc-950"></span>
+          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 mb-1">
+            <h3 class="font-semibold">Antasya</h3>
+            <span class="text-xs text-zinc-400 dark:text-zinc-500 tabular-nums">2021 — 2022</span>
+          </div>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400">Team Lead</p>
+        </div>
 
-										<div class="date">2017 - 2021</div>
-										<h3>ERICSSON</h3>
-										<h4>Solutions Architect</h4>
-										<p style="text-align: center; width: 100%;">
-											<img alt="" src="/assets/images/ericsson.png" style="width: 150px;" />
-										</p>
-									</div>
-								</div>
-								<div class="timeline-box timeline-box-left">
-									<span class="dot"></span>
+        <div class="relative">
+          <span class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-700 border-2 border-white dark:border-zinc-950"></span>
+          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 mb-1">
+            <h3 class="font-semibold">Ericsson</h3>
+            <span class="text-xs text-zinc-400 dark:text-zinc-500 tabular-nums">2017 — 2021</span>
+          </div>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400">Solutions Architect</p>
+        </div>
 
-									<div class="timeline-box-inner animate-right">
-										<span class="arrow"></span>
+        <div class="relative">
+          <span class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-700 border-2 border-white dark:border-zinc-950"></span>
+          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 mb-1">
+            <h3 class="font-semibold">Istanbul Commodity Exchange</h3>
+            <span class="text-xs text-zinc-400 dark:text-zinc-500 tabular-nums">2015 — 2017</span>
+          </div>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400">IT Manager</p>
+        </div>
 
-										<div class="date">2015 - 2017</div>
-										<h3>ISTANBUL COMMODITY EXCHANGE</h3>
-										<h4>IT Manager</h4>
-										<p style="text-align: center; width: 100%;">
-											<img alt="" src="/assets/images/istib.png" style="width: 150px;" />
-										</p>
-									</div>
-								</div>
-								<div class="timeline-box timeline-box-right">
-									<span class="dot"></span>
+        <div class="relative">
+          <span class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-700 border-2 border-white dark:border-zinc-950"></span>
+          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 mb-1">
+            <h3 class="font-semibold">Ankara Sigorta</h3>
+            <span class="text-xs text-zinc-400 dark:text-zinc-500 tabular-nums">2014 — 2015</span>
+          </div>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400">Assistant IT Manager</p>
+        </div>
 
-									<div class="timeline-box-inner animate-right">
-										<span class="arrow"></span>
+        <div class="relative">
+          <span class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-700 border-2 border-white dark:border-zinc-950"></span>
+          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 mb-1">
+            <h3 class="font-semibold">Doğan Gazetecilik</h3>
+            <span class="text-xs text-zinc-400 dark:text-zinc-500 tabular-nums">2012 — 2014</span>
+          </div>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400">Software Developer</p>
+        </div>
 
-										<div class="date">2014 - 2015</div>
-										<h3>ANKARA SIGORTA</h3>
-										<h4>Assistant IT Manager</h4>
-										<p style="text-align: center; width: 100%;">
-											<img alt="" src="/assets/images/ankara-sigorta.jpg" style="width: 150px;" />
-										</p>
-									</div>
-								</div>
-								<div class="timeline-box timeline-box-left">
-									<span class="dot"></span>
+        <div class="relative">
+          <span class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-700 border-2 border-white dark:border-zinc-950"></span>
+          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 mb-1">
+            <h3 class="font-semibold">Kariyer.net</h3>
+            <span class="text-xs text-zinc-400 dark:text-zinc-500 tabular-nums">2012 — 2012</span>
+          </div>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400">Software Developer</p>
+        </div>
 
-									<div class="timeline-box-inner animate-right">
-										<span class="arrow"></span>
+        <div class="relative">
+          <span class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-700 border-2 border-white dark:border-zinc-950"></span>
+          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 mb-1">
+            <h3 class="font-semibold">IRM Ajans</h3>
+            <span class="text-xs text-zinc-400 dark:text-zinc-500 tabular-nums">2009 — 2012</span>
+          </div>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400">Software Developer</p>
+        </div>
 
-										<div class="date">2012 - 2014</div>
-										<h3>DOGAN GAZETECILIK</h3>
-										<h4>Software Developer</h4>
-										<p style="text-align: center; width: 100%;">
-											<img alt="" src="/assets/images/dogan-gazetecilik.jpg" style="width: 150px;" />
-										</p>
-									</div>
-								</div>
-								<div class="timeline-box timeline-box-right">
-									<span class="dot"></span>
+      </div>
+    </section>
 
-									<div class="timeline-box-inner animate-right">
-										<span class="arrow"></span>
+    <!-- Education -->
+    <section id="education" class="fade-up delay-2">
+      <h2 class="text-sm font-medium text-zinc-400 dark:text-zinc-500 uppercase tracking-widest mb-8">Education</h2>
 
-										<div class="date">2012 - 2012</div>
-										<h3>KARIYER.NET</h3>
-										<h4>Software Developer</h4>
-										<p style="text-align: center; width: 100%;">
-											<img alt="" src="/assets/images/kariyer-net.png" style="width: 150px;" />
-										</p>
-									</div>
-								</div>
-								<div class="timeline-box timeline-box-left">
-									<span class="dot"></span>
+      <div class="relative pl-5 space-y-8 border-l border-zinc-200 dark:border-zinc-800">
 
-									<div class="timeline-box-inner animate-right">
-										<span class="arrow"></span>
+        <div class="relative">
+          <span class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-900 dark:bg-zinc-100 border-2 border-white dark:border-zinc-950"></span>
+          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 mb-1">
+            <h3 class="font-semibold">Istanbul University — Cerrahpaşa</h3>
+            <span class="text-xs text-zinc-400 dark:text-zinc-500 tabular-nums">2022 — 2025</span>
+          </div>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400">M.Sc. Computer Engineering</p>
+        </div>
 
-										<div class="date">2009 - 2012</div>
-										<h3>IRM AJANS</h3>
-										<h4>Software Developer</h4>
-										<p style="text-align: center; width: 100%;">
-											<img alt="" src="/assets/images/irm-ajans.png" style="width: 150px;" />
-										</p>
-									</div>
-								</div>
+        <div class="relative">
+          <span class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-700 border-2 border-white dark:border-zinc-950"></span>
+          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 mb-1">
+            <h3 class="font-semibold">Istanbul University</h3>
+            <span class="text-xs text-zinc-400 dark:text-zinc-500 tabular-nums">2005 — 2010</span>
+          </div>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400">B.Sc. Computer Engineering</p>
+        </div>
 
-							</div>
-						</div>
-					</div>
-				</section>
+      </div>
+    </section>
 
-				<section id="education" class="section section-education">
-					<div class="animate-up">
-						<h2 class="section-title">Education</h2>
-						<div class="timeline">
-							<div class="timeline-bar"></div>
-							<div class="timeline-inner clearfix">
-								<div class="timeline-box timeline-box-left">
-									<span class="dot"></span>
+  </main>
 
-									<div class="timeline-box-inner animate-right">
-										<span class="arrow"></span>
-										<div class="date">2022 - 2025</div>
-										<h3>POSTGRADUATE</h3>
-										<h4>COMPUTER ENGINEERING
-											<br />ISTANBUL UNIVERSITY - CERRAHPASA</h4>
-										<p style="text-align: center; width: 100%;">
-											<img alt="" src="/assets/images/iuc.jpg" style="width: 150px;" />
-										</p>
-									</div>
-								</div>
-								<div class="timeline-box timeline-box-right">
-									<span class="dot"></span>
+  <!-- Footer -->
+  <footer class="border-t border-zinc-200 dark:border-zinc-800 mt-8">
+    <div class="max-w-3xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-zinc-400 dark:text-zinc-500">
+      <span>Burak Kanmaz</span>
+    </div>
+  </footer>
 
-									<div class="timeline-box-inner animate-right">
-										<span class="arrow"></span>
-										<div class="date">2005 - 2010</div>
-										<h3>UNDERGRADUATE</h3>
-										<h4>COMPUTER ENGINEERING
-											<br />ISTANBUL UNIVERSITY</h4>
-										<p style="text-align: center; width: 100%;">
-											<img alt="" src="/assets/images/istanbul-universitesi.jpg" style="width: 150px;" />
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-			</div>
-		</div>
-		<br><br>
-		<footer class="footer">
-			Burak KANMAZ &copy; Updated: 21 Dec, 2024
-		</footer>
-	</div>
-	<a class="btn-scroll-top" href="#">
-		<i class="rsicon rsicon-arrow-up"></i>
-	</a>
-	<div id="overlay"></div>
-	<div id="preloader">
-		<div class="preload-icon">
-			<span></span>
-			<span></span>
-		</div>
-		<div class="preload-text">Loading ...</div>
-	</div>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-	<script type="text/javascript" src="/assets/scripts/plugins/jquery.mousewheel-3.0.6.pack.js"></script>
-	<script type="text/javascript" src="/assets/scripts/plugins/jquery.appear.min.js"></script>
-	<script type="text/javascript" src="/assets/scripts/plugins/jquery.onepagenav.min.js"></script>
-	<script type="text/javascript" src="/assets/scripts/options.js"></script>
-	<script type="text/javascript" src="/assets/scripts/site.js"></script>
+  <script>
+    // Theme toggle
+    const toggle = document.getElementById('theme-toggle');
+    const iconSun = document.getElementById('icon-sun');
+    const iconMoon = document.getElementById('icon-moon');
+    const html = document.documentElement;
+
+    function applyTheme(dark) {
+      html.classList.toggle('dark', dark);
+      iconSun.classList.toggle('hidden', !dark);
+      iconMoon.classList.toggle('hidden', dark);
+    }
+
+    // Init from system preference or saved choice
+    const saved = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    applyTheme(saved ? saved === 'dark' : prefersDark);
+
+    toggle.addEventListener('click', () => {
+      const isDark = html.classList.contains('dark');
+      localStorage.setItem('theme', isDark ? 'light' : 'dark');
+      applyTheme(!isDark);
+    });
+  </script>
 </body>
 
 </html>
