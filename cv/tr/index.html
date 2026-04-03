@@ -1,1049 +1,494 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" class="scroll-smooth">
 
 <head>
-    <meta charset="utf-8" />
-    <title>Burak Kanmaz - Özgeçmiş</title>
-    <meta name="description" content="Burak Kanmaz - Özgeçmiş" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Burak Kanmaz — Özgeçmiş</title>
+  <meta name="description" content="Burak Kanmaz — Özgeçmiş" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MRCX9GNSW5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-MRCX9GNSW5');
+  </script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } },
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
-    <link href="../Content/Metronic/plugins/general/plugins/flaticon/flaticon.css" rel="stylesheet" type="text/css" />
-    <link href="../Content/Metronic/plugins/general/plugins/flaticon2/flaticon.css" rel="stylesheet" type="text/css" />
-    <link href="../Content/Metronic/plugins/general/fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet"
-        type="text/css" />
-    <link href="../Content/Metronic/plugins/general/plugins/line-awesome/css/line-awesome.css" rel="stylesheet"
-        type="text/css" />
+    .skill-track {
+      height: 5px;
+      border-radius: 9999px;
+      background: #e4e4e7;
+      overflow: hidden;
+    }
+    .dark .skill-track { background: #3f3f46; }
+    .skill-fill {
+      height: 100%;
+      border-radius: 9999px;
+      background: #18181b;
+    }
+    .dark .skill-fill { background: #f4f4f5; }
 
-    <link href="../Content/Metronic/css/style.bundle.min.css" rel="stylesheet" type="text/css" />
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MRCX9GNSW5"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-MRCX9GNSW5');
-    </script>
+    @media print {
+      @page { size: A4; margin: 12mm 14mm; }
+      html, body { background: white !important; color: black !important; }
+      #web-toolbar { display: none !important; }
+      html.dark * { color: inherit !important; background: white !important; border-color: #e4e4e7 !important; }
+      #cv-root { font-size: 8.5pt !important; }
+      #cv-root h1  { font-size: 16pt !important; }
+      #cv-root h2  { font-size: 7pt !important; }
+      #cv-root h3  { font-size: 9pt !important; }
+      * { box-shadow: none !important; border-radius: 0 !important; }
+      .skill-track  { background: #e4e4e7 !important; }
+      .skill-fill   { background: #18181b !important; }
+      .exp-item    { margin-bottom: 6pt !important; }
+    }
+  </style>
 </head>
 
-<body
-    class="kt-page--loading-enabled kt-page--loading kt-header--fixed kt-header--minimize-topbar kt-header-mobile--fixed kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-subheader--enabled kt-subheader--transparent kt-page--loading">
-    <div class="kt-grid kt-grid--hor kt-grid--root">
-        <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
-            <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
-                <div class="kt-body kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-grid--stretch"
-                    id="kt_body">
-                    <div class="kt-content kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
-                        <div class="kt-container kt-grid__item kt-grid__item--fluid">
-                            <style>
-                                body {
-                                    font-size: 14px;
-                                }
+<body class="bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 transition-colors duration-300 min-h-screen py-8 px-4">
 
-                                .print-only {
-                                    display: none;
-                                }
+  <!-- Web toolbar (hidden on print) -->
+  <div id="web-toolbar" class="max-w-5xl mx-auto mb-4 flex items-center justify-between gap-3">
+    <div class="flex items-center gap-2">
+      <span class="text-xs font-semibold px-2 py-0.5 rounded bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 tracking-widest">BETA</span>
+      <a href="/cv/tr/legacy.html" class="text-xs text-zinc-400 dark:text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">Eski sürümü görüntüle</a>
+    </div>
+    <span class="text-xs text-zinc-400 dark:text-zinc-500">Son güncelleme: 4 Nisan 2026</span>
+    <div class="flex items-center gap-2">
+      <button
+        onclick="window.print()"
+        class="inline-flex items-center gap-1.5 text-sm px-3 py-1.5 rounded-md border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        Yazdır / PDF Kaydet
+      </button>
+      <button
+        id="theme-toggle"
+        aria-label="Temayı değiştir"
+        class="h-8 w-8 inline-flex items-center justify-center rounded-md border border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+      >
+        <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" class="hidden"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      </button>
+      <a href="/cv/" class="h-8 px-2.5 inline-flex items-center justify-center rounded-md border border-zinc-200 dark:border-zinc-800 text-xs text-zinc-500 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors font-medium">EN</a>
+    </div>
+  </div>
 
-                                @media print {
-                                    .pagebreak {
-                                        page-break-before: always;
-                                    }
+  <!-- CV Root -->
+  <div id="cv-root" class="max-w-5xl mx-auto bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl shadow-sm overflow-hidden">
 
-                                    .print-only {
-                                        display: block;
-                                    }
-
-                                    a:link {
-                                        border-bottom: none !important;
-                                        text-decoration: none !important;
-                                    }
-
-                                    a[href]:after {
-                                        content: none !important;
-                                    }
-
-                                    .kt-portlet__head-toolbar {
-                                        display: none !important;
-                                    }
-                                }
-
-                                .kt-notes__item {
-                                    padding: 0 0 20px 45px !important;
-                                }
-
-                                .kt-notes .kt-notes__items .kt-notes__item .kt-notes__media img {
-                                    max-width: 60px;
-                                    max-height: 60px;
-                                    width: 60px;
-                                    height: 60px;
-                                }
-
-                                .kt-notes .kt-notes__items .kt-notes__item .kt-notes__media {
-                                    left: -30px;
-                                }
-
-                                .sectest {
-                                    width: 120px;
-                                    height: auto;
-                                    margin-right: 10px;
-                                }
-
-                                .kt-timeline-v3 .kt-timeline-v3__item:before {
-                                    left: 0;
-                                    top: 0;
-                                    height: 100%;
-                                }
-
-                                .kt-timeline-v3 .kt-timeline-v3__item .kt-timeline-v3__item-desc {
-                                    padding-left: 1em;
-                                }
-
-                                .kt-user-card-v2 .kt-user-card-v2__pic .kt-badge {
-                                    width: 30px;
-                                    height: 30px;
-                                }
-
-                                .kt-badge {
-                                    font-size: 1.2rem;
-                                }
-
-                                .kt-user-card-v2__details {
-                                    margin-left: 5px;
-                                }
-
-                                .kt-header-mobile--fixed .kt-wrapper {
-                                    padding: 0;
-                                }
-
-                                @media (max-width: 760px) {
-                                    .kt-notes__media {
-                                        display: none;
-                                    }
-
-                                    .kt-notes .kt-notes__items .kt-notes__item {
-                                        border-left: 0;
-                                    }
-
-                                    .kt-notes__item {
-                                        padding: 0 !important;
-                                    }
-
-                                    .kt-notes .kt-notes__items .kt-notes__item .kt-notes__content:after {
-                                        content: normal;
-                                    }
-
-                                    .kt-notes .kt-notes__items .kt-notes__item {
-                                        margin: 0 20px 20px 0;
-                                    }
-
-                                    .summary-info {
-                                        margin-top: 20px;
-                                    }
-
-                                    .kt-notes .kt-notes__items .kt-notes__item .kt-notes__content .kt-notes__body {
-                                        padding-right: 0;
-                                    }
-                                }
-
-                                body {
-                                    text-align: justify;
-                                }
-                            </style>
-
-                            <div class="kt-container kt-grid__item kt-grid__item--fluid" style="margin-top: 20px">
-                                <div class="row justify-content-center">
-                                    <div class="col-xs-12 text-center d-sm-none" style="margin-bottom: 10px">
-                                        <a target="_blank" href="/cv/Content/Files/BurakKanmaz-TR-20251118.pdf"
-                                            class="btn btn-success">
-                                            <em class="fa fa-file-pdf" style="margin-right: 5px"></em>
-                                            PDF olarak İndir
-                                        </a>
-                                    </div>
-                                    <div class="col-md-12 print-only" style="margin-bottom: 10px">
-                                        <div class="kt-section__content kt-section__content--solid">
-                                            <div class="kt-divider">
-                                                <span></span>
-                                                <span>
-                                                    Bu özgeçmiş en son 18 Kasım 2025'te güncellendi. Özgeçmişimin en
-                                                    son sürümü için lütfen şu adresi ziyaret edin: <a
-                                                        class="kt-link kt-font-boldest"
-                                                        href="https://burakkanmaz.com/cv/tr">https://burakkanmaz.com/cv/tr</a>.
-                                                </span>
-                                                <span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="kt-portlet">
-                                            <div class="kt-portlet__body" style="padding: 10px">
-                                                <img src="../Content/Images/2024-4.jpg" class="d-sm-block d-none"
-                                                    style="width: 100%" alt="Burak Kanmaz" />
-                                                <img src="../Content/Images/2024-4.jpg" class="d-sm-none d-block"
-                                                    style="width: 100%" alt="Burak Kanmaz" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-10">
-                                        <div class="kt-portlet" style="min-height: 200px">
-                                            <div class="kt-portlet__head">
-                                                <div class="kt-portlet__head-label">
-                                                    <h2 class="kt-portlet__head-title kt-font-brand">
-                                                        Burak Kanmaz
-                                                    </h2>
-                                                    <span style="margin-left: 15px; width: 180px"
-                                                        class="kt-badge kt-badge--brand kt-badge--lg kt-badge--rounded kt-badge--inline">
-                                                        Software Architect
-                                                    </span>
-                                                </div>
-                                                <div class="kt-portlet__head-toolbar">
-                                                    <div class="btn-group">
-                                                        <a target="_blank"
-                                                            href="/cv/Content/Files/BurakKanmaz-TR-20251118.pdf"
-                                                            class="btn btn-success d-sm-block d-none">
-                                                            <em class="fa fa-file-pdf" style="margin-right: 5px"></em>
-                                                            PDF olarak İndir
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="kt-portlet__body">
-                                                <div class="row">
-                                                    <div class="col-md-4 col-lg-3">
-                                                        <div class="kt-user-card-v2" style="margin-bottom: 10px">
-                                                            <div class="kt-user-card-v2__pic">
-                                                                <div class="kt-badge kt-badge--brand">
-                                                                    <em class="fa fa-mobile"></em>
-                                                                </div>
-                                                            </div>
-                                                            <div class="kt-user-card-v2__details">
-                                                                <a class="kt-user-card-v2__name"
-                                                                    href="tel:+905387789086">
-                                                                    +90 (538) 778 90 86
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="kt-user-card-v2" style="margin-bottom: 10px">
-                                                            <div class="kt-user-card-v2__pic">
-                                                                <div class="kt-badge kt-badge--brand">
-                                                                    <em class="fa fa-at"></em>
-                                                                </div>
-                                                            </div>
-                                                            <div class="kt-user-card-v2__details">
-                                                                <a class="kt-user-card-v2__name"
-                                                                    href="mailto:burak@kanmaz.net">
-                                                                    burak@kanmaz.net
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="kt-user-card-v2">
-                                                            <div class="kt-user-card-v2__pic">
-                                                                <div class="kt-badge kt-badge--brand">
-                                                                    <em class="fa fa-birthday-cake"></em>
-                                                                </div>
-                                                            </div>
-                                                            <div class="kt-user-card-v2__details">
-                                                                <a class="kt-user-card-v2__name">12 Nisan 1987</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-8 col-lg-9 summary-info">
-                                                        Evli ve iki çocuk babası olan Burak, 15 yılı aşkın süredir
-                                                        Microsoft teknolojileri üzerinde profesyonel olarak
-                                                        çalışmaktadır. Aynı zamanda trend teknolojileri düzenli olarak
-                                                        takip ederek ve yeniliklere açık olarak çalışmaktadır. Yenilikçi
-                                                        kişiliğiyle tüm işlerinde kaliteye, performansa ve verimliliğe
-                                                        büyük önem vermektedir. Bu çalışma prensibini ekip ve proje
-                                                        yönetiminde de uygulamaktadır.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-7">
-                                        <div class="kt-portlet">
-                                            <div class="kt-portlet__head">
-                                                <div class="kt-portlet__head-label">
-                                                    <h3 class="kt-portlet__head-title">
-                                                        İş Tecrübeleri
-                                                    </h3>
-                                                </div>
-                                            </div>
-                                            <div class="kt-portlet__body" style="padding-bottom: 60px">
-                                                <div class="kt-notes">
-                                                    <div class="kt-notes__items">
-                                                        <div class="kt-notes__item">
-                                                            <div class="kt-notes__media">
-                                                                <img src="../Content/Images/freelance.png"
-                                                                    alt="image" />
-                                                            </div>
-                                                            <div class="kt-notes__content">
-                                                                <div class="kt-notes__section">
-                                                                    <div class="kt-notes__info">
-                                                                        <a href="javascript:void(0);"
-                                                                            class="kt-notes__title kt-font-info">
-                                                                            Software Architect
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="kt-notes__section">
-                                                                    <div class="kt-notes__info">
-                                                                        <a href="javascript:void(0);"
-                                                                            class="kt-notes__title kt-font-dark">
-                                                                            Freelance
-                                                                        </a>
-                                                                        <em class="kt-notes__desc">
-                                                                            Aralık, 2022 - ....
-                                                                        </em>
-                                                                    </div>
-                                                                </div>
-                                                                <span class="kt-notes__body">
-                                                                    Gizlilik anlaşması (NDA) nedeniyle ismi
-                                                                    paylaşılmayan bir ABD şirketinde yazılım mimarı
-                                                                    olarak, şirketin ana ürününün geliştirilmesi ve
-                                                                    modernizasyonuna katkı sağlamaktadır. Sorumlulukları
-                                                                    arasında, proje yönetim senkronizasyonu için bir
-                                                                    Jira Eklentisi, ekip bildirimleri için Microsoft
-                                                                    Teams ve Slack uygulamaları gibi entegrasyonların
-                                                                    tasarlanması ve uygulanması ile .NET Framework'ten
-                                                                    .NET 9'a geçiş sürecinin yönetilmesi yer almaktadır.
-                                                                    Ayrıca, otomasyon, dağıtım ve izleme süreçlerini
-                                                                    geliştirmek amacıyla Docker containerization, Open
-                                                                    Telemetry ve Linux betiklerini etkin şekilde
-                                                                    kullanmakta; yapay zeka uygulamaları ve otomasyon
-                                                                    çözümleri üzerinde de çalışmakta; ürünün ve teknik
-                                                                    altyapının sürekli gelişimine destek olmaktadır.
-                                                                </span>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="kt-notes__item">
-                                                            <div class="kt-notes__media">
-                                                                <img src="../Content/Images/inooster-logo.png"
-                                                                    alt="image" />
-                                                            </div>
-                                                            <div class="kt-notes__content">
-                                                                <div class="kt-notes__section">
-                                                                    <div class="kt-notes__info">
-                                                                        <a href="javascript:void(0);"
-                                                                            class="kt-notes__title kt-font-info">
-                                                                            Head of Technology
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="kt-notes__section">
-                                                                    <div class="kt-notes__info">
-                                                                        <a href="javascript:void(0);"
-                                                                            class="kt-notes__title kt-font-dark">
-                                                                            Inooster
-                                                                        </a>
-                                                                        <em class="kt-notes__desc">
-                                                                            Nisan, 2022 - Aralık, 2022
-                                                                        </em>
-                                                                    </div>
-                                                                </div>
-                                                                <span class="kt-notes__body">
-                                                                    Türkiye'nin oyunlaştırma çözümleri sağlayan en
-                                                                    önemli şirketinde Teknoloji Başkanıydı. İşletmeyi
-                                                                    kurduktan sonra, Jira'da ürünler geliştirerek
-                                                                    şirketin oyunlaştırma deneyimini çeşitli
-                                                                    platformlara yaymasına yardımcı oldu. Şirketin beş
-                                                                    ürününü ve 20'den fazla müşteri portföyünü,
-                                                                    ürünlerini ve teknik süreçlerini denetledi ve
-                                                                    yönetti. Ayrıca, denetimi altındaki iki
-                                                                    yazılım ekibiyle çalıştı.
-                                                                </span>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="kt-notes__item">
-                                                            <div class="kt-notes__media">
-                                                                <img src="../Content/Images/antasya.png" alt="image" />
-                                                            </div>
-                                                            <div class="kt-notes__content">
-                                                                <div class="kt-notes__section">
-                                                                    <div class="kt-notes__info">
-                                                                        <a href="javascript:void(0);"
-                                                                            class="kt-notes__title kt-font-info">
-                                                                            Team Lead
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="kt-notes__section">
-                                                                    <div class="kt-notes__info">
-                                                                        <a href="javascript:void(0);"
-                                                                            class="kt-notes__title kt-font-dark">
-                                                                            Antasya
-                                                                        </a>
-                                                                        <em class="kt-notes__desc">
-                                                                            Mayıs, 2021 - Nisan, 2022
-                                                                        </em>
-                                                                    </div>
-                                                                </div>
-                                                                <span class="kt-notes__body">
-                                                                    Yedi kişilik bir yazılım ekibinin Ekip Lideri
-                                                                    olarak, ekibin çalışmalarını yönetti ve müşterilerle
-                                                                    iletişim kurdu. Üç holding, bir banka ve bir üretim
-                                                                    tesisi olmak üzere beş kurumsal şirket için 15
-                                                                    projeyi başarıyla yönetti. <br /><br />
-                                                                    Ekibi yönetmenin yanı sıra, şirket içindeki tüm
-                                                                    teknik işlerden de sorumluydu. Şirketin fiziksel ve
-                                                                    dijital teknik varlıklarını aktif olarak yönetti,
-                                                                    diğer ekiplerle koordinasyon sağladı ve şirketin
-                                                                    geleceğini planladı. <br /><br />
-                                                                    Görev süresi boyunca müşterilerle teknik iletişimde
-                                                                    ve bu süreçleri yönetmede hayati bir rol oynadı.
-                                                                    75'ten fazla görüşme gerçekleştirdi ve dahili ekibin
-                                                                    genişlemesine yardımcı oldu. Jira konusundaki
-                                                                    uzmanlığı, şirketin müşterilerine Jira Danışmanlık
-                                                                    hizmetleri sunmasını sağladı.
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="pagebreak"></div>
-                                                        <div class="kt-notes__item">
-                                                            <div class="kt-notes__media">
-                                                                <img src="../Content/Images/ericsson.png" alt="image" />
-                                                            </div>
-                                                            <div class="kt-notes__content">
-                                                                <div class="kt-notes__section">
-                                                                    <div class="kt-notes__info">
-                                                                        <a href="javascript:void(0);"
-                                                                            class="kt-notes__title kt-font-info">
-                                                                            Solutions Architect
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="kt-notes__section">
-                                                                    <div class="kt-notes__info">
-                                                                        <a href="javascript:void(0);"
-                                                                            class="kt-notes__title kt-font-dark">
-                                                                            Ericsson
-                                                                        </a>
-                                                                        <em class="kt-notes__desc">
-                                                                            Mayıs, 2017 - Nisan, 2021
-                                                                        </em>
-                                                                    </div>
-                                                                </div>
-                                                                <span class="kt-notes__body">
-                                                                    Türkiye'nin en büyük GSM operatörü Turkcell'de 20
-                                                                    kişilik bir ekipte kıdemli yazılım geliştiricisi
-                                                                    olarak çalışmaya başladı. Ekip, çağrı merkezi akış
-                                                                    yönetimi projesinden sorumluydu.
-                                                                    <br /><br />
-                                                                    Ekim 2017'de projedeki kritik modüllerden birini
-                                                                    yönetmekten sorumluydu.
-                                                                    Bu pozisyonda çalıştığı yıl boyunca, müşteriyle
-                                                                    iletişim
-                                                                    kişisi olarak görev yaptı ve
-                                                                    baş geliştirici olarak görev yaptı.
-                                                                    <br /><br />
-                                                                    Ekim 2018'de, Turkcell Global Bilgi'nin kurumsal
-                                                                    uygulamalarını sürdürmek ve geliştirmek için
-                                                                    oluşturulan
-                                                                    15 kişilik bir ekibin başında Çözüm Mimarı olarak
-                                                                    atandı.
-                                                                    Süreç boyunca, ekibi kurmaktan ve müşteriyle
-                                                                    ilişkileri yönetmekten sorumluydu.
-                                                                    Ekibiyle birlikte 20'den fazla projede geliştirme ve
-                                                                    teknik destek hizmetleri sağladı.
-                                                                </span>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="kt-notes__item">
-                                                            <div class="kt-notes__media">
-                                                                <img src="../Content/Images/istib.png" alt="image" />
-                                                            </div>
-                                                            <div class="kt-notes__content">
-                                                                <div class="kt-notes__section">
-                                                                    <div class="kt-notes__info">
-                                                                        <a href="javascript:void(0);"
-                                                                            class="kt-notes__title kt-font-info">
-                                                                            IT Manager
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="kt-notes__section">
-                                                                    <div class="kt-notes__info">
-                                                                        <a href="javascript:void(0);"
-                                                                            class="kt-notes__title kt-font-dark">
-                                                                            İstanbul Ticaret Borsası
-                                                                        </a>
-                                                                        <em class="kt-notes__desc">
-                                                                            2015 - 2017
-                                                                        </em>
-                                                                    </div>
-                                                                </div>
-                                                                <span class="kt-notes__body">
-                                                                    Bilgi teknolojileri bölümünde beş kişilik bir ekibi
-                                                                    yönetmekten ve şirketin beş lokasyona yayılmış 120
-                                                                    çalışanının tüm yazılım ve donanım gereksinimlerini
-                                                                    karşılamaktan sorumluydu. <br /><br />
-                                                                    Ağ altyapısını yeniden yapılandırdı,
-                                                                    internet erişim kurallarını, dosya paylaşımlarını ve
-                                                                    güvenlik duvarlarını değiştirerek
-                                                                    güvenliği ve yetkilendirmeyi artırdı.
-                                                                    Ayrıca, maksimum güvenlik ve yetkilendirmeyi
-                                                                    sağlamak için kullanıcı yetkilendirmelerini optimize
-                                                                    etti.
-                                                                    Ayrıca,
-                                                                    ağ içindeki tüm kullanıcı eylemlerini izlemek,
-                                                                    uyarmak ve kontrol etmek için bir sistem uyguladı.
-                                                                </span>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="kt-notes__item">
-                                                            <div class="kt-notes__media">
-                                                                <img src="../Content/Images/ankara-sigorta.png"
-                                                                    alt="image" />
-                                                            </div>
-                                                            <div class="kt-notes__content">
-                                                                <div class="kt-notes__section">
-                                                                    <div class="kt-notes__info">
-                                                                        <a href="javascript:void(0);"
-                                                                            class="kt-notes__title kt-font-info">
-                                                                            IT Manager Assistant
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="kt-notes__section">
-                                                                    <div class="kt-notes__info">
-                                                                        <a href="javascript:void(0);"
-                                                                            class="kt-notes__title kt-font-dark">
-                                                                            Ankara Sigorta
-                                                                        </a>
-                                                                        <em class="kt-notes__desc">
-                                                                            2014 - 2015
-                                                                        </em>
-                                                                    </div>
-                                                                </div>
-                                                                <span class="kt-notes__body">
-                                                                    Ankara Sigorta web sitesinde bir güvenlik açığı
-                                                                    keşfettikten sonra, tüm kaynak
-                                                                    kodlarına ve veritabanlarına erişebildi. Şirkete bu
-                                                                    açığı bildirdikten sonra, yazılımı denetlemekten
-                                                                    sorumlu 12 kişilik Bilgi Teknolojileri
-                                                                    ekibinin Yardımcı Müdürü olarak atandı.
-                                                                    <br /><br />
-                                                                    Öncelikli odak noktası, .NET Framework kullanılarak
-                                                                    yakın zamanda geliştirilen altyapıdaki
-                                                                    performans sorunlarını ele almaktı.
-                                                                </span>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="kt-notes__item">
-                                                            <div class="kt-notes__media">
-                                                                <img src="../Content/Images/dogan-gazetecilik.jpg"
-                                                                    alt="image" />
-                                                            </div>
-                                                            <div class="kt-notes__content">
-                                                                <div class="kt-notes__section">
-                                                                    <div class="kt-notes__info">
-                                                                        <a href="javascript:void(0);"
-                                                                            class="kt-notes__title kt-font-info">
-                                                                            Senior Software Developer
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="kt-notes__section">
-                                                                    <div class="kt-notes__info">
-                                                                        <a href="javascript:void(0);"
-                                                                            class="kt-notes__title kt-font-dark">
-                                                                            Doğan Gazetecilik
-                                                                        </a>
-                                                                        <em class="kt-notes__desc">
-                                                                            2012 - 2014
-                                                                        </em>
-                                                                    </div>
-                                                                </div>
-                                                                <span class="kt-notes__body">
-                                                                    Çeşitli spor karşılaşmalarının sonuçlarını canlı
-                                                                    olarak yayınlamak için Canlı Skor projesinde aktif
-                                                                    olarak yer aldı
-                                                                    ve futbola odaklandı. Proje MSSQL üzerinde ASP.NET
-                                                                    MVC kullanılarak geliştirildi. Ziyaretçiler için
-                                                                    daha hızlı skor güncellemeleri sağlamak için
-                                                                    Angular JS ve Knockout JS kullandı.
-                                                                    NetScaler'ın yardımıyla, herhangi bir performans
-                                                                    sorunu olmadan
-                                                                    65.000 ziyaretçiyi idare edebilen bir sistem
-                                                                    oluşturdu.
-                                                                </span>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="kt-notes__item">
-                                                            <div class="kt-notes__media">
-                                                                <img src="../Content/Images/kariyer-net.png"
-                                                                    alt="image" />
-                                                            </div>
-                                                            <div class="kt-notes__content">
-                                                                <div class="kt-notes__section">
-                                                                    <div class="kt-notes__info">
-                                                                        <a href="javascript:void(0);"
-                                                                            class="kt-notes__title kt-font-info">
-                                                                            Software Developer
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="kt-notes__section">
-                                                                    <div class="kt-notes__info">
-                                                                        <a href="javascript:void(0);"
-                                                                            class="kt-notes__title kt-font-dark">
-                                                                            Kariyer.net
-                                                                        </a>
-                                                                        <em class="kt-notes__desc">
-                                                                            2012 - 2012
-                                                                        </em>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="kt-notes__item">
-                                                            <div class="kt-notes__media">
-                                                                <img src="../Content/Images/irm-ajans.png"
-                                                                    alt="image" />
-                                                            </div>
-                                                            <div class="kt-notes__content">
-                                                                <div class="kt-notes__section">
-                                                                    <div class="kt-notes__info">
-                                                                        <a href="javascript:void(0);"
-                                                                            class="kt-notes__title kt-font-info">
-                                                                            Software Developer
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="kt-notes__section">
-                                                                    <div class="kt-notes__info">
-                                                                        <a href="javascript:void(0);"
-                                                                            class="kt-notes__title kt-font-dark">
-                                                                            IRM Ajans
-                                                                        </a>
-                                                                        <em class="kt-notes__desc">
-                                                                            2009 - 2012
-                                                                        </em>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-5">
-                                        <div class="kt-portlet">
-                                            <div class="kt-portlet__head">
-                                                <div class="kt-portlet__head-label">
-                                                    <h3 class="kt-portlet__head-title">
-                                                        Uzmanlık Alanları
-                                                    </h3>
-                                                </div>
-                                            </div>
-                                            <div class="kt-portlet__body" style="display: block">
-                                                <div class="kt-timeline-v3">
-                                                    <div class="kt-timeline-v3__items">
-                                                        <div class="kt-timeline-v3__item kt-timeline-v3__item--success">
-                                                            <div class="kt-timeline-v3__item-desc">
-                                                                <span class="kt-timeline-v3__item-text">
-                                                                    <a href="#" class="kt-link kt-font-boldest">
-                                                                        Backend Teknolojileri
-                                                                    </a> </span><br />
-                                                                <span class="kt-timeline-v3__item-user-name">
-                                                                    <a href="#" class="kt-link kt-link--dark">
-                                                                        .NET, Node JS,
-                                                                        ASP.NET MVC, C#
-                                                                    </a>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="kt-timeline-v3__item kt-timeline-v3__item--success">
-                                                            <div class="kt-timeline-v3__item-desc">
-                                                                <span class="kt-timeline-v3__item-text">
-                                                                    <a href="#" class="kt-link kt-font-boldest">
-                                                                        Frontend Teknolojileri
-                                                                    </a> </span><br />
-                                                                <span class="kt-timeline-v3__item-user-name">
-                                                                    <a href="#" class="kt-link kt-link--dark">
-                                                                        React JS, Angular, Bootstrap, Typescript
-                                                                    </a>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="kt-timeline-v3__item kt-timeline-v3__item--success">
-                                                            <div class="kt-timeline-v3__item-desc">
-                                                                <span class="kt-timeline-v3__item-text">
-                                                                    <a href="#" class="kt-link kt-font-boldest">
-                                                                        Mobil Teknolojiler
-                                                                    </a> </span><br />
-                                                                <span class="kt-timeline-v3__item-user-name">
-                                                                    <a href="#" class="kt-link kt-link--dark">
-                                                                        Flutter, React Native
-                                                                    </a>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="kt-timeline-v3__item kt-timeline-v3__item--success">
-                                                            <div class="kt-timeline-v3__item-desc">
-                                                                <span class="kt-timeline-v3__item-text">
-                                                                    <a href="#" class="kt-link kt-font-boldest">
-                                                                        Veri Tabanı ve Cache Teknolojileri
-                                                                    </a> </span><br />
-                                                                <span class="kt-timeline-v3__item-user-name">
-                                                                    <a href="#" class="kt-link kt-link--dark">
-                                                                        EF, MSSQL, PL/SQL, PostreSQL, MongoDB,
-                                                                        Redis, RabbitMQ, Solr, Elastic Search
-                                                                        (ELK)
-                                                                    </a>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="kt-timeline-v3__item kt-timeline-v3__item--success">
-                                                            <div class="kt-timeline-v3__item-desc">
-                                                                <span class="kt-timeline-v3__item-text">
-                                                                    <a href="#" class="kt-link kt-font-boldest">
-                                                                        DevOps Teknolojileri
-                                                                    </a> </span><br />
-                                                                <span class="kt-timeline-v3__item-user-name">
-                                                                    <a href="#" class="kt-link kt-link--dark">
-                                                                        Windows Server, IIS, Linux, Docker, Azure,
-                                                                        Github Actions, AWS, Cloudflare, Firewall
-                                                                    </a>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="kt-timeline-v3__item kt-timeline-v3__item--success">
-                                                            <div class="kt-timeline-v3__item-desc">
-                                                                <span class="kt-timeline-v3__item-text">
-                                                                    <a href="#" class="kt-link kt-font-boldest">
-                                                                        Proje Yönetimi
-                                                                    </a> </span><br />
-                                                                <span class="kt-timeline-v3__item-user-name">
-                                                                    <a href="#" class="kt-link kt-link--dark">
-                                                                        Jira, Confluence, Azure DevOps, Git, TFS,
-                                                                        Bitbucket
-                                                                    </a>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="kt-timeline-v3__item kt-timeline-v3__item--success">
-                                                            <div class="kt-timeline-v3__item-desc">
-                                                                <span class="kt-timeline-v3__item-text">
-                                                                    <a href="#" class="kt-link kt-font-boldest">
-                                                                        Yönetim Teknolojileri
-                                                                    </a> </span><br />
-                                                                <span class="kt-timeline-v3__item-user-name">
-                                                                    <a href="#" class="kt-link kt-link--dark">
-                                                                        Microsoft 365, Exchange, Teams, Azure, MPN,
-                                                                        Cloudflare
-                                                                    </a>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="kt-timeline-v3__item kt-timeline-v3__item--success">
-                                                            <div class="kt-timeline-v3__item-desc">
-                                                                <span class="kt-timeline-v3__item-text">
-                                                                    <a href="#" class="kt-link kt-font-boldest">
-                                                                        Diğer
-                                                                    </a> </span><br />
-                                                                <span class="kt-timeline-v3__item-user-name">
-                                                                    <a href="#" class="kt-link kt-link--dark">
-                                                                        Bilgi Güvenliği and Pentest
-                                                                    </a>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="kt-portlet">
-                                            <div class="kt-portlet__head">
-                                                <div class="kt-portlet__head-label">
-                                                    <h3 class="kt-portlet__head-title">
-                                                        Information Security
-                                                    </h3>
-                                                </div>
-                                            </div>
-                                            <div class="kt-portlet__body" style="display: block">
-                                                <p>
-                                                    2012'den beri hobi olarak bilgi güvenliği alanında çalışmaktadır.
-                                                    Öğrenimi sırasında birçok şirkete güvenlik danışmanlığı ve pentest
-                                                    hizmeti vermiştir.
-                                                    Bilgi güvenliğinin yanı sıra,
-                                                    sosyal mühendislik, ağ güvenliği, penetrasyon testi ve uygulama
-                                                    güvenliği konularında danışmanlık yapmıştır.
-                                                    Bu konuda birçok şirketle çalışmıştır.
-                                                </p>
-                                                <p style="text-align: center">
-                                                    <span>
-                                                        <img alt="" src="../Content/Images/papara.jpg"
-                                                            class="sectest" />
-                                                    </span>
-                                                    <span>
-                                                        <img alt="" src="../Content/Images/ciceksepeti.png"
-                                                            class="sectest" />
-                                                    </span>
-                                                    <span>
-                                                        <img alt="" src="../Content/Images/kariyer.png"
-                                                            class="sectest" />
-                                                    </span>
-                                                    <br />
-                                                    <span>
-                                                        <img alt="" src="../Content/Images/btcturk.png"
-                                                            class="sectest" />
-                                                    </span>
-                                                    <span>
-                                                        <img alt="" src="../Content/Images/btctrader.png"
-                                                            class="sectest" />
-                                                    </span>
-                                                    <span>
-                                                        <img alt="" src="../Content/Images/ankaras.png"
-                                                            class="sectest" />
-                                                    </span>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="pagebreak"></div>
-
-                                        <div class="kt-portlet">
-                                            <div class="kt-portlet__head">
-                                                <div class="kt-portlet__head-label">
-                                                    <h3 class="kt-portlet__head-title">
-                                                        Ödüller ve Başarılar
-                                                    </h3>
-                                                </div>
-                                            </div>
-                                            <div class="kt-portlet__body">
-                                                <div class="kt-widget4">
-                                                    <div class="kt-widget4__item">
-                                                        <span class="kt-widget4__icon">
-                                                            <em class="flaticon-medal kt-font-info"></em>
-                                                        </span>
-                                                        <a href="javascript:void(0);"
-                                                            class="kt-widget4__title kt-widget4__title--light">
-                                                            Ericsson, pandemi sırasında ekibiyle birlikte
-                                                            gerçekleştirdiği üretken uzaktan çalışmalarından dolayı
-                                                            kendisine özel bir takdir ödülü verdi.
-                                                        </a>
-                                                        <span class="kt-widget4__number kt-font-info">2020</span>
-                                                    </div>
-                                                    <div class="kt-widget4__item">
-                                                        <span class="kt-widget4__icon">
-                                                            <em class="flaticon-medal kt-font-info"></em>
-                                                        </span>
-                                                        <a href="javascript:void(0);"
-                                                            class="kt-widget4__title kt-widget4__title--light">
-                                                            Ayrıca Ericsson tarafından "MMEA'nın 2019 Şampiyonlar Ödülü
-                                                            Kazananı" olarak tanındı.
-                                                        </a>
-                                                        <span class="kt-widget4__number kt-font-info">2019</span>
-                                                    </div>
-                                                    <div class="kt-widget4__item">
-                                                        <span class="kt-widget4__icon">
-                                                            <em class="flaticon2-cup kt-font-info"></em>
-                                                        </span>
-                                                        <a href="javascript:void(0);"
-                                                            class="kt-widget4__title kt-widget4__title--light">
-                                                            Ayrıca Microsoft'un düzenlediği uluslararası
-                                                            Imagine Cup yazılım yarışmasında Türkiye'de birincilik
-                                                            ödülüne layık
-                                                            görüldü.
-                                                        </a>
-                                                        <span class="kt-widget4__number kt-font-info">2010</span>
-                                                    </div>
-                                                    <div class="kt-widget4__item">
-                                                        <span class="kt-widget4__icon">
-                                                            <em class="flaticon-star kt-font-info"></em>
-                                                        </span>
-                                                        <a href="javascript:void(0);"
-                                                            class="kt-widget4__title kt-widget4__title--light">
-                                                            Ayrıca iki kez Microsoft Student Partner olarak seçildi.
-                                                        </a>
-                                                        <span class="kt-widget4__number kt-font-info">2008, 2009</span>
-                                                    </div>
-                                                    <div class="kt-widget4__item">
-                                                        <span class="kt-widget4__icon">
-                                                            <em class="flaticon-book kt-font-info"></em>
-                                                        </span>
-                                                        <a href="javascript:void(0);"
-                                                            class="kt-widget4__title kt-widget4__title--light">
-                                                            Windows 7 hakkında bir kitap yazdı.
-                                                        </a>
-                                                        <span class="kt-widget4__number kt-font-info">2008</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="kt-portlet">
-                                            <div class="kt-portlet__head">
-                                                <div class="kt-portlet__head-label">
-                                                    <h3 class="kt-portlet__head-title">
-                                                        Eğitim Geçmişi
-                                                    </h3>
-                                                </div>
-                                            </div>
-                                            <div class="kt-portlet__body" style="padding-bottom: 0">
-                                                <div class="kt-notes">
-                                                    <div class="kt-notes__items">
-                                                        <div class="kt-notes__item">
-                                                            <div class="kt-notes__media">
-                                                                <img src="../Content/Images/iuc.jpg" alt="image" />
-                                                            </div>
-                                                            <div class="kt-notes__content">
-                                                                <div class="kt-notes__section">
-                                                                    <div class="kt-notes__info">
-                                                                        <a href="javascript:void(0);"
-                                                                            class="kt-notes__title kt-font-info">
-                                                                            Yüksek Lisans
-                                                                        </a>
-                                                                        <span class="kt-notes__desc">
-                                                                            Bilgisayar Mühendisliği
-                                                                        </span>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="kt-notes__section">
-                                                                    <div class="kt-notes__info">
-                                                                        <a href="javascript:void(0);"
-                                                                            class="kt-notes__title kt-font-dark">
-                                                                            İstanbul Üniversitesi - Cerrahpaşa
-                                                                        </a>
-                                                                        <em class="kt-notes__desc">
-                                                                            2022 - 2025
-                                                                        </em>
-                                                                    </div>
-                                                                </div>
-                                                                <span class="kt-notes__body">
-                                                                    "Yapay Zeka ile Üretilen Kodun Güvenlik Açığı
-                                                                    İncelemesi" konulu tez ile yüksek lisansını
-                                                                    tamamladı.
-                                                                </span>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="kt-notes__item">
-                                                            <div class="kt-notes__media">
-                                                                <img src="../Content/Images/istanbul-universitesi.jpg"
-                                                                    alt="image" />
-                                                            </div>
-                                                            <div class="kt-notes__content">
-                                                                <div class="kt-notes__section">
-                                                                    <div class="kt-notes__info">
-                                                                        <a href="javascript:void(0);"
-                                                                            class="kt-notes__title kt-font-info">
-                                                                            Lisans
-                                                                        </a>
-                                                                        <span class="kt-notes__desc">
-                                                                            Sosyoloji
-                                                                        </span>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="kt-notes__section">
-                                                                    <div class="kt-notes__info">
-                                                                        <a href="javascript:void(0);"
-                                                                            class="kt-notes__title kt-font-dark">
-                                                                            İstanbul Üniversitesi
-                                                                        </a>
-                                                                        <em class="kt-notes__desc">
-                                                                            2020 - ....
-                                                                        </em>
-                                                                    </div>
-                                                                </div>
-                                                                <span class="kt-notes__body">
-                                                                    Sosyoloji ve psikolojiye olan ilgisini uzaktan
-                                                                    eğitim yoluyla sosyoloji okuyarak sürdürdü.
-                                                                </span>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="kt-notes__item">
-                                                            <div class="kt-notes__media">
-                                                                <img src="../Content/Images/istanbul-universitesi.jpg"
-                                                                    alt="image" />
-                                                            </div>
-                                                            <div class="kt-notes__content">
-                                                                <div class="kt-notes__section">
-                                                                    <div class="kt-notes__info">
-                                                                        <a href="javascript:void(0);"
-                                                                            class="kt-notes__title kt-font-info">
-                                                                            Lisans
-                                                                        </a>
-                                                                        <span class="kt-notes__desc">
-                                                                            Bilgisayar Mühendisliği
-                                                                        </span>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="kt-notes__section">
-                                                                    <div class="kt-notes__info">
-                                                                        <a href="javascript:void(0);"
-                                                                            class="kt-notes__title kt-font-dark">
-                                                                            İstanbul Üniversitesi
-                                                                        </a>
-                                                                        <em class="kt-notes__desc">
-                                                                            2005 - 2010
-                                                                        </em>
-                                                                    </div>
-                                                                </div>
-                                                                <span class="kt-notes__body">
-                                                                    Lisans eğitimi sırasında, birey
-                                                                    bilgisayar kulübü başkanlığı ve
-                                                                    bölüm öğrenci temsilciliği görevlerinde bulundu ve
-                                                                    bölüm laboratuvar asistanı olarak çalıştı.
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Header -->
+    <div class="px-8 pt-8 pb-6 border-b border-zinc-200 dark:border-zinc-800">
+      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+        <div>
+          <h1 class="text-3xl font-bold tracking-tight">Burak Kanmaz</h1>
+          <p class="text-zinc-500 dark:text-zinc-400 mt-0.5 text-sm font-medium">İstanbul, Türkiye</p>
+          <p class="text-xs text-zinc-400 dark:text-zinc-500 mt-1">15+ yıl &middot; 5 yıl Geliştirici &middot; 7 yıl Lider &middot; 4 yıl Mimar</p>
         </div>
+        <div class="flex flex-wrap gap-x-5 gap-y-1.5 text-sm text-zinc-500 dark:text-zinc-400 sm:text-right">
+          <a href="tel:+905387789086" class="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">+90 538 778 90 86</a>
+          <a href="mailto:burak@kanmaz.net" class="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">burak@kanmaz.net</a>
+          <a href="https://www.linkedin.com/in/burakkanmaz/" target="_blank" rel="noopener" class="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">linkedin.com/in/burakkanmaz</a>
+          <a href="https://burakkanmaz.com" target="_blank" rel="noopener" class="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">burakkanmaz.com</a>
+        </div>
+      </div>
     </div>
 
-    <script>
-        var KTAppOptions = {
-            colors: {
-                state: {
-                    brand: "#3d94fb",
-                    light: "#ffffff",
-                    dark: "#282a3c",
-                    primary: "#5867dd",
-                    success: "#34bfa3",
-                    info: "#3d94fb",
-                    warning: "#ffb822",
-                    danger: "#fd27eb",
-                },
-                base: {
-                    label: ["#c5cbe3", "#a1a8c3", "#3d4465", "#3e4466"],
-                    shape: ["#f0f3ff", "#d9dffa", "#afb4d4", "#646c9a"],
-                },
-            },
-        };
-    </script>
+    <!-- Body: two columns -->
+    <div class="grid grid-cols-1 md:grid-cols-[5fr_7fr] divide-y md:divide-y-0 md:divide-x divide-zinc-200 dark:divide-zinc-800">
 
-    <script src="../Content/Metronic/plugins/general/jquery/dist/jquery.js" type="text/javascript"></script>
-    <script src="../Content/Metronic/plugins/general/popper.js/dist/umd/popper.js" type="text/javascript"></script>
-    <script src="../Content/Metronic/plugins/general/bootstrap/dist/js/bootstrap.min.js"
-        type="text/javascript"></script>
+      <!-- Left column -->
+      <div class="px-7 py-6 space-y-7">
 
-    <script src="../Content/Metronic/js/scripts.bundle.min.js" type="text/javascript"></script>
+        <!-- Özet -->
+        <section>
+          <h2 class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-3">Özet</h2>
+          <ul class="space-y-1.5 text-sm text-zinc-700 dark:text-zinc-300">
+            <li class="flex gap-2"><span class="text-zinc-300 dark:text-zinc-600 select-none mt-0.5">—</span><span>On beş yılı aşkın .NET ekosisteminde üretim sistemi geliştirme deneyimi</span></li>
+            <li class="flex gap-2"><span class="text-zinc-300 dark:text-zinc-600 select-none mt-0.5">—</span><span>On beşe kadar mühendisten oluşan ekipler kurdu ve yönetti; telekom, fintech ve medyada kurumsal projeler teslim etti</span></li>
+            <li class="flex gap-2"><span class="text-zinc-300 dark:text-zinc-600 select-none mt-0.5">—</span><span>Yüksek Lisans tezi: Yapay Zeka ile Üretilen Kodun Güvenlik Açıkları</span></li>
+            <li class="flex gap-2"><span class="text-zinc-300 dark:text-zinc-600 select-none mt-0.5">—</span><span>Güvenlik araştırmacısı; Papara, Çiçeksepeti, BtcTurk ve diğer kurumlara açıkları bildirdi</span></li>
+            <li class="flex gap-2"><span class="text-zinc-300 dark:text-zinc-600 select-none mt-0.5">—</span><span>Microsoft Öğrenci Ortağı (iki dönem); Imagine Cup Türkiye birincisi</span></li>
+          </ul>
+        </section>
+
+        <!-- Yetkinlikler -->
+        <section>
+          <h2 class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-3">Yetkinlikler</h2>
+          <div class="space-y-2.5">
+
+            <div>
+              <div class="flex justify-between text-xs mb-1">
+                <span class="text-zinc-700 dark:text-zinc-300 font-medium">C# / .NET</span>
+                <span class="text-zinc-400 dark:text-zinc-500">Uzman</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" style="width:95%"></div></div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs mb-1">
+                <span class="text-zinc-700 dark:text-zinc-300 font-medium">ASP.NET / Web API</span>
+                <span class="text-zinc-400 dark:text-zinc-500">Uzman</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" style="width:92%"></div></div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs mb-1">
+                <span class="text-zinc-700 dark:text-zinc-300 font-medium">MSSQL / PostgreSQL</span>
+                <span class="text-zinc-400 dark:text-zinc-500">İleri Düzey</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" style="width:85%"></div></div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs mb-1">
+                <span class="text-zinc-700 dark:text-zinc-300 font-medium">Docker / Linux</span>
+                <span class="text-zinc-400 dark:text-zinc-500">İleri Düzey</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" style="width:80%"></div></div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs mb-1">
+                <span class="text-zinc-700 dark:text-zinc-300 font-medium">Azure / Bulut</span>
+                <span class="text-zinc-400 dark:text-zinc-500">İleri Düzey</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" style="width:78%"></div></div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs mb-1">
+                <span class="text-zinc-700 dark:text-zinc-300 font-medium">React / TypeScript</span>
+                <span class="text-zinc-400 dark:text-zinc-500">Orta Düzey</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" style="width:70%"></div></div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs mb-1">
+                <span class="text-zinc-700 dark:text-zinc-300 font-medium">Jira / Confluence</span>
+                <span class="text-zinc-400 dark:text-zinc-500">Uzman</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" style="width:90%"></div></div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs mb-1">
+                <span class="text-zinc-700 dark:text-zinc-300 font-medium">Bilgi Güvenliği</span>
+                <span class="text-zinc-400 dark:text-zinc-500">İleri Düzey</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" style="width:75%"></div></div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Eğitim -->
+        <section>
+          <h2 class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-3">Eğitim</h2>
+          <div class="space-y-4">
+
+            <div>
+              <div class="flex items-baseline justify-between gap-2">
+                <p class="text-sm font-semibold">İstanbul Üniversitesi — Cerrahpaşa</p>
+                <span class="text-xs text-zinc-400 dark:text-zinc-500 whitespace-nowrap">2022 — 2025</span>
+              </div>
+              <p class="text-xs text-zinc-500 dark:text-zinc-400">Yüksek Lisans · Bilgisayar Mühendisliği</p>
+              <p class="text-xs text-zinc-400 dark:text-zinc-500 mt-0.5 italic">Tez: Yapay Zeka ile Üretilen Kodun Güvenlik Açıklarının İncelenmesi</p>
+            </div>
+
+            <div>
+              <div class="flex items-baseline justify-between gap-2">
+                <p class="text-sm font-semibold">İstanbul Üniversitesi</p>
+                <span class="text-xs text-zinc-400 dark:text-zinc-500 whitespace-nowrap">2005 — 2010</span>
+              </div>
+              <p class="text-xs text-zinc-500 dark:text-zinc-400">Lisans · Bilgisayar Mühendisliği</p>
+              <p class="text-xs text-zinc-400 dark:text-zinc-500 mt-0.5">Bilgisayar kulübü başkanı · Bölüm öğrenci temsilcisi · Lab asistanı</p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Ödüller -->
+        <section>
+          <h2 class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-3">Ödüller</h2>
+          <div class="space-y-2 text-sm">
+            <div class="flex gap-3 items-start">
+              <span class="text-xs text-zinc-400 dark:text-zinc-500 tabular-nums whitespace-nowrap mt-0.5">2020</span>
+              <p class="text-zinc-700 dark:text-zinc-300 text-xs">Ericsson Özel Takdir Ödülü — pandemi sürecinde uzaktan ekip verimliliği</p>
+            </div>
+            <div class="flex gap-3 items-start">
+              <span class="text-xs text-zinc-400 dark:text-zinc-500 tabular-nums whitespace-nowrap mt-0.5">2019</span>
+              <p class="text-zinc-700 dark:text-zinc-300 text-xs">Ericsson MMEA Şampiyonlar Ödülü</p>
+            </div>
+            <div class="flex gap-3 items-start">
+              <span class="text-xs text-zinc-400 dark:text-zinc-500 tabular-nums whitespace-nowrap mt-0.5">2010</span>
+              <p class="text-zinc-700 dark:text-zinc-300 text-xs">Microsoft Imagine Cup — Türkiye Birincisi</p>
+            </div>
+            <div class="flex gap-3 items-start">
+              <span class="text-xs text-zinc-400 dark:text-zinc-500 tabular-nums whitespace-nowrap mt-0.5">2008–09</span>
+              <p class="text-zinc-700 dark:text-zinc-300 text-xs">Microsoft Öğrenci Ortağı (iki dönem)</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Yayınlar -->
+        <section>
+          <h2 class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-3">Yayınlar</h2>
+          <div class="flex gap-3 items-start">
+            <span class="text-xs text-zinc-400 dark:text-zinc-500 tabular-nums whitespace-nowrap mt-0.5">2008</span>
+            <p class="text-xs text-zinc-700 dark:text-zinc-300"><span class="italic">Windows 7</span> — Windows yedi üzerine teknik kitap</p>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Right column: Experience -->
+      <div class="px-7 py-6">
+        <h2 class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-5">İş Deneyimi</h2>
+
+        <div class="relative pl-4 space-y-6 border-l border-zinc-200 dark:border-zinc-800">
+
+          <!-- BtcTurk -->
+          <div class="exp-item relative">
+            <span class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-900 dark:bg-zinc-100 border-2 border-white dark:border-zinc-900"></span>
+            <div class="flex flex-col xs:flex-row xs:items-baseline xs:justify-between gap-0.5 mb-0.5">
+              <h3 class="font-semibold text-sm">BtcTurk</h3>
+              <span class="text-xs text-zinc-400 dark:text-zinc-500 tabular-nums whitespace-nowrap">2026 — devam ediyor</span>
+            </div>
+            <p class="text-xs font-medium text-zinc-500 dark:text-zinc-400 mb-1.5">Takım Lideri</p>
+            <ul class="text-xs text-zinc-600 dark:text-zinc-400 space-y-0.5 mb-2">
+              <li>— Türkiye'nin en büyük kripto borsasında HFT (Yüksek Frekanslı Alım Satım) mühendislik ekibine liderlik ediyor</li>
+            </ul>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">.NET</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">C#</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">Docker</span>
+            </div>
+          </div>
+
+          <!-- ProSymmetry -->
+          <div class="exp-item relative">
+            <span class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-700 border-2 border-white dark:border-zinc-900"></span>
+            <div class="flex flex-col xs:flex-row xs:items-baseline xs:justify-between gap-0.5 mb-0.5">
+              <h3 class="font-semibold text-sm">ProSymmetry</h3>
+              <span class="text-xs text-zinc-400 dark:text-zinc-500 tabular-nums whitespace-nowrap">Ara 2022 — Oca 2026 · 3 yıl 2 ay</span>
+            </div>
+            <p class="text-xs font-medium text-zinc-500 dark:text-zinc-400 mb-1.5">Yazılım Mimarı</p>
+            <ul class="text-xs text-zinc-600 dark:text-zinc-400 space-y-0.5 mb-2">
+              <li>— .NET Framework'ten .NET 9'a geçişi yönetti</li>
+              <li>— Jira Eklentisi, MS Teams Uygulaması ve Slack Uygulama entegrasyonları geliştirdi</li>
+              <li>— OpenTelemetry gözlemlenebilirliği ve Docker konteynerizasyonu uyguladı</li>
+              <li>— Yapay Zeka/LLM otomasyon özellikleri teslim etti</li>
+            </ul>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">.NET 9</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">C#</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">Docker</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">OpenTelemetry</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">Jira SDK</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">MS Teams SDK</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">Slack API</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">Linux</span>
+            </div>
+          </div>
+
+          <!-- Inooster -->
+          <div class="exp-item relative">
+            <span class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-700 border-2 border-white dark:border-zinc-900"></span>
+            <div class="flex flex-col xs:flex-row xs:items-baseline xs:justify-between gap-0.5 mb-0.5">
+              <h3 class="font-semibold text-sm">Inooster</h3>
+              <span class="text-xs text-zinc-400 dark:text-zinc-500 tabular-nums whitespace-nowrap">Nis 2022 — Ara 2022 · 9 ay</span>
+            </div>
+            <p class="text-xs font-medium text-zinc-500 dark:text-zinc-400 mb-1.5">Teknoloji Direktörü</p>
+            <ul class="text-xs text-zinc-600 dark:text-zinc-400 space-y-0.5 mb-2">
+              <li>— Beş ürün ve yirmiden more than kurumsal müşteri hesabını yönetti</li>
+              <li>— İki mühendislik ekibini yönetti; Jira oyunlaştırma platformunu geliştirdi</li>
+            </ul>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">.NET</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">Jira</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">Confluence</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">Azure DevOps</span>
+            </div>
+          </div>
+
+          <!-- Antasya -->
+          <div class="exp-item relative">
+            <span class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-700 border-2 border-white dark:border-zinc-900"></span>
+            <div class="flex flex-col xs:flex-row xs:items-baseline xs:justify-between gap-0.5 mb-0.5">
+              <h3 class="font-semibold text-sm">Antasya</h3>
+              <span class="text-xs text-zinc-400 dark:text-zinc-500 tabular-nums whitespace-nowrap">May 2021 — Nis 2022 · 1 yıl</span>
+            </div>
+            <p class="text-xs font-medium text-zinc-500 dark:text-zinc-400 mb-1.5">Takım Lideri</p>
+            <ul class="text-xs text-zinc-600 dark:text-zinc-400 space-y-0.5 mb-2">
+              <li>— Yedi mühendisi yönetti; beş kurumsal müşteri için on beş proje teslim etti</li>
+              <li>— Yetmiş beş veya daha fazla teknik mülakat yürüttü; ekibi büyüttü</li>
+              <li>— Yeni bir hizmet hattı olarak Jira danışmanlık pratiği kurdu</li>
+            </ul>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">ASP.NET MVC</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">C#</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">MSSQL</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">Jira</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">Azure DevOps</span>
+            </div>
+          </div>
+
+          <!-- Ericsson -->
+          <div class="exp-item relative">
+            <span class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-700 border-2 border-white dark:border-zinc-900"></span>
+            <div class="flex flex-col xs:flex-row xs:items-baseline xs:justify-between gap-0.5 mb-0.5">
+              <h3 class="font-semibold text-sm">Ericsson</h3>
+              <span class="text-xs text-zinc-400 dark:text-zinc-500 tabular-nums whitespace-nowrap">May 2017 — Nis 2021 · 4 yıl</span>
+            </div>
+            <p class="text-xs font-medium text-zinc-500 dark:text-zinc-400 mb-1.5">Çözüm Mimarı</p>
+            <ul class="text-xs text-zinc-600 dark:text-zinc-400 space-y-0.5 mb-2">
+              <li>— Turkcell çağrı merkezi akış yönetiminde (yirmi kişilik ekip) kıdemli geliştirici olarak başladı</li>
+              <li>— On beş mühendise liderlik eden Çözüm Mimarı pozisyonuna terfi etti</li>
+              <li>— Turkcell Global Bilgi için yirmiden more than kurumsal proje teslim etti</li>
+            </ul>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">ASP.NET MVC</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">C#</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">MSSQL</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">IIS</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">Azure</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">TFS</span>
+            </div>
+          </div>
+
+          <!-- Istanbul Commodity Exchange -->
+          <div class="exp-item relative">
+            <span class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-700 border-2 border-white dark:border-zinc-900"></span>
+            <div class="flex flex-col xs:flex-row xs:items-baseline xs:justify-between gap-0.5 mb-0.5">
+              <h3 class="font-semibold text-sm">İstanbul Ticaret Borsası</h3>
+              <span class="text-xs text-zinc-400 dark:text-zinc-500 tabular-nums whitespace-nowrap">2015 — 2017 · 2 yıl</span>
+            </div>
+            <p class="text-xs font-medium text-zinc-500 dark:text-zinc-400 mb-1.5">BT Müdürü</p>
+            <ul class="text-xs text-zinc-600 dark:text-zinc-400 space-y-0.5 mb-2">
+              <li>— Beş konumdaki 120 personelin BT altyapısını yönetti</li>
+              <li>— Ağ güvenliğini yeniden yapılandırdı: güvenlik duvarları, Active Directory, dosya paylaşımları</li>
+            </ul>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">Windows Server</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">Active Directory</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">IIS</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">.NET</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">Firewall</span>
+            </div>
+          </div>
+
+          <!-- Ankara Sigorta -->
+          <div class="exp-item relative">
+            <span class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-700 border-2 border-white dark:border-zinc-900"></span>
+            <div class="flex flex-col xs:flex-row xs:items-baseline xs:justify-between gap-0.5 mb-0.5">
+              <h3 class="font-semibold text-sm">Ankara Sigorta</h3>
+              <span class="text-xs text-zinc-400 dark:text-zinc-500 tabular-nums whitespace-nowrap">2014 — 2015 · 1 yıl</span>
+            </div>
+            <p class="text-xs font-medium text-zinc-500 dark:text-zinc-400 mb-1.5">BT Müdür Yardımcısı</p>
+            <ul class="text-xs text-zinc-600 dark:text-zinc-400 space-y-0.5 mb-2">
+              <li>— .NET Framework tabanlı sigorta platformundaki kritik performans sorunlarını çözdü</li>
+            </ul>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">.NET Framework</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">ASP.NET MVC</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">MSSQL</span>
+            </div>
+          </div>
+
+          <!-- Doğan Gazetecilik -->
+          <div class="exp-item relative">
+            <span class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-700 border-2 border-white dark:border-zinc-900"></span>
+            <div class="flex flex-col xs:flex-row xs:items-baseline xs:justify-between gap-0.5 mb-0.5">
+              <h3 class="font-semibold text-sm">Doğan Gazetecilik</h3>
+              <span class="text-xs text-zinc-400 dark:text-zinc-500 tabular-nums whitespace-nowrap">2012 — 2014 · 2 yıl</span>
+            </div>
+            <p class="text-xs font-medium text-zinc-500 dark:text-zinc-400 mb-1.5">Kıdemli Yazılım Geliştirici</p>
+            <ul class="text-xs text-zinc-600 dark:text-zinc-400 space-y-0.5 mb-2">
+              <li>— 65.000 eş zamanlı kullanıcıya hizmet veren canlı spor skoru platformu geliştirdi</li>
+            </ul>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">ASP.NET MVC</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">C#</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">MSSQL</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">AngularJS</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">Knockout.js</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">NetScaler</span>
+            </div>
+          </div>
+
+          <!-- Kariyer.net -->
+          <div class="exp-item relative">
+            <span class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-700 border-2 border-white dark:border-zinc-900"></span>
+            <div class="flex flex-col xs:flex-row xs:items-baseline xs:justify-between gap-0.5 mb-0.5">
+              <h3 class="font-semibold text-sm">Kariyer.net</h3>
+              <span class="text-xs text-zinc-400 dark:text-zinc-500 tabular-nums whitespace-nowrap">2012 — 2012 · 6 ay</span>
+            </div>
+            <p class="text-xs font-medium text-zinc-500 dark:text-zinc-400 mb-2">Yazılım Geliştirici</p>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">ASP.NET</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">.NET</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">MSSQL</span>
+            </div>
+          </div>
+
+          <!-- IRM Ajans -->
+          <div class="exp-item relative">
+            <span class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-700 border-2 border-white dark:border-zinc-900"></span>
+            <div class="flex flex-col xs:flex-row xs:items-baseline xs:justify-between gap-0.5 mb-0.5">
+              <h3 class="font-semibold text-sm">IRM Ajans</h3>
+              <span class="text-xs text-zinc-400 dark:text-zinc-500 tabular-nums whitespace-nowrap">2009 — 2012 · 3 yıl</span>
+            </div>
+            <p class="text-xs font-medium text-zinc-500 dark:text-zinc-400 mb-2">Yazılım Geliştirici</p>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">ASP.NET</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">.NET</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400">MSSQL</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const iconSun = document.getElementById('icon-sun');
+    const iconMoon = document.getElementById('icon-moon');
+    const html = document.documentElement;
+
+    function applyTheme(dark) {
+      html.classList.toggle('dark', dark);
+      iconSun.classList.toggle('hidden', !dark);
+      iconMoon.classList.toggle('hidden', dark);
+    }
+
+    const saved = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    applyTheme(saved ? saved === 'dark' : prefersDark);
+
+    toggle.addEventListener('click', () => {
+      const isDark = html.classList.contains('dark');
+      localStorage.setItem('theme', isDark ? 'light' : 'dark');
+      applyTheme(!isDark);
+    });
+  </script>
 </body>
 
 </html>
